@@ -7,6 +7,7 @@ const public_users = express.Router();
 
 public_users.post("/register", (req,res) => {
   //Write your code here
+  JSON.stringfy(books);
   return res.status(300).json({message: "Yet to be implemented"});
 public_users.post("/register", (req, res) => {
     if (req.body.username && req.body.password) {
@@ -37,6 +38,9 @@ public_users.get('/', function (req, res) {
 // Get book details based on ISBN
 public_users.get('/isbn/:isbn',function (req, res) {
   //Write your code here
+  var isbn;
+  isbn =prompt("enter isbn value");
+  console.log(books['isbn']);
   return res.status(300).json({message: "Yet to be implemented"});
  });
 
@@ -55,6 +59,9 @@ public_users.get('/isbn/:isbn', function (req, res) {
 // Get book details based on author
 public_users.get('/author/:author',function (req, res) {
   //Write your code here
+  let author;
+  author=prompt("enter author name")
+  console.log(books['author'];
   return res.status(300).json({message: "Yet to be implemented"});
 public_users.get('/author/:author', function (req, res) {
     let author = req.params.author;
@@ -70,6 +77,8 @@ public_users.get('/author/:author', function (req, res) {
 // Get all books based on title
 public_users.get('/title/:title',function (req, res) {
   //Write your code here
+  let title=prompt("enter title");
+  console.log(books['title'];
   return res.status(300).json({message: "Yet to be implemented"});
 public_users.get('/title/:title', function (req, res) {
     let title = req.params.title;
@@ -84,6 +93,7 @@ public_users.get('/title/:title', function (req, res) {
 //  Get book review
 public_users.get('/review/:isbn',function (req, res) {
   //Write your code here
+  let review=prompt("enter review");
   return res.status(300).json({message: "Yet to be implemented"});
 public_users.get('/review/:isbn', function (req, res) {
     let isbn = req.params.isbn
